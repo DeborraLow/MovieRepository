@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Welcome to The Movie Repository</title>
+<link href="../CSS/Style-Master%202000.css" rel="stylesheet" />
+<script type="text/javascript" src="../JS/Java-Script%20Master%202000.js"></script>
+</head>
+<body onload="Is_Login();">  
+
+<div id="Wrapper"> <!--Contains the entire page-->
+    <div id="Header"> <!--Contains the entire header-->
+        <div id="Header_Title"> <!--Contains the title of the website-->
+            <h1 onclick="javascript:location.href='Homepage.html'">The Movie Repository</h1>
+        </div>
+        <div id="Login_Bar_Loggedin"> <!--Account Status when user is logged in-->
+            <a id="Loggedin_Username"></a>
+            <input type="button" id="Logout_Button" value="Logout" onclick="Logout();" />
+        </div>
+        <div id="Login_Bar"> <!--Account Status when user is not logged in-->
+            <a href="#" onclick="togglehiding()" style="position:relative; left:2px;">Login</a>
+            <a href="./Register.html" style="position:relative; left:130px;">Register</a>
+           
+            <div id="Login_Credentials"> <!--Will appear once Login is clicked-->
+                <form>
+                    <table>
+                        <tr>
+                            <td>
+                                Username:
+                            </td>
+                            <td>
+                                <input type="text" id="Username_input" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Password:
+                            </td>
+                            <td>
+                                <input type="password" id="Password_input" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="button" value="Login" id="Login_Submit"  onclick="ValidateLogin();" />
+                            </td>
+                            <td>
+                                <a href="./Forgot_Password.html" style="font-size:11px;">Forgot your Password?</a>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="Middle"> <!--Contains the Side Menu & Content-->
+        <div id="Side_Menu"> <!--Contains site navigation-->
+        <h2>   
+            <ul>   
+                <li onclick="javascript:location.href='Homepage.html'">Home</li>
+                <li onclick="javascript:location.href='Movie_List.html'">Movie List</li>
+                <li onclick="javascript:location.href='About.html'"><b>About</b></li>
+            </ul>
+        </h2>
+        </div>
+        
+        <div id="Content_Box"> <!--Contains main content for all pages-->
+            <a class="Underlined">ABOUT </a><br /> <!--"About" section-->
+            <a class="Small">is a website that allows anyone to purchase and download movies from our extensive selection. It can all be done conveniently and quickly, with our focus of having a very streamlined process from start to end, always keeping the customer in mind.</a><hr />
+
+            <a class="Underlined" id="Help">HELP</a><br /> <!--Help section with instructions to on how to use website-->
+            <a class="Small"> Wondering how to use this website? No problem, just follow the simple instructions below:</a><br /><br />
+            <a class="Small_Bold">Step 1:</a><br />
+            <a class="Small">Head over to our </a><a class="Small, Coloured" href="Movie_List.html">Movie List</a><a class="Small">, from there you will find a a list of the movies available for purchase. To view additional information about the movies, just click on the Image of the movie.</a><br />
+            <a class="Small_Bold">Step 2:</a><br />
+            <a class="Small">From here, tick the checkboxes of the movies you would like to purchase. A list of the movies you have selected will be updated as you make selections. When you have finished selecting, click the <input type="button" value="Proceed to Checkout" /> button.</a><br />
+            <a class="Small_Bold">Step 3:</a><br />
+            <a class="Small">A results table will be generated to display your order information. Once you are ready to make your purchase simply click the <input type="button" value="Confirm Selection" /> button.</a><br />
+            <a class="Small_Bold">Step 4:</a><br />
+            <a class="Small">Fill in your details in the form provided and then click the</a><br />
+            <a class="Small_Bold">Step 5:</a><br />
+            <a class="Small">Have a seat, get some popcorn and lift your feet up. It's Movie Time!</a>
+        </div>
+    </div>
+
+    <div id="Footer"> <!--Contains the footer-->
+        <h3>The Footer is currently an empty void. Please ignore this.</h3>
+    </div>
+</div>
+
+</body>
+</html>

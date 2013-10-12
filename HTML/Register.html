@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    
+<head>
+    <title>Welcome to The Movie Repository</title>
+<link href="../CSS/Style-Master%202000.css" rel="stylesheet" />
+<script type="text/javascript" src="../JS/Java-Script%20Master%202000.js"></script>
+</head>
+<body onload="Is_Login();">  
+
+<div id="Wrapper"> <!--Contains the entire page-->
+    <div id="Header"> <!--Contains the entire header-->
+        <div id="Header_Title"> <!--Contains the title of the website-->
+            <h1 onclick="javascript:location.href='Homepage.html'">The Movie Repository</h1>
+        </div>
+        <div id="Login_Bar_Loggedin"> <!--Account Status when user is logged in-->
+            <a id="Loggedin_Username"></a>
+            <input type="button" id="Logout_Button" value="Logout" onclick="Logout();" />
+        </div>
+        <div id="Login_Bar"> <!--Account Status when user is not logged in-->
+            <a href="#" onclick="togglehiding()" style="position:relative; left:2px;">Login</a>
+            <a href="./Register.html" style="position:relative; left:130px;">Register</a>
+           
+            <div id="Login_Credentials"> <!--Will appear once Login is clicked-->
+                <form>
+                    <table>
+                        <tr>
+                            <td>
+                                Username:
+                            </td>
+                            <td>
+                                <input type="text" id="Username_input" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Password:
+                            </td>
+                            <td>
+                                <input type="password" id="Password_input" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="submit" value="Login" id="Login_Submit" onclick="ValidateLogin();" />
+                            </td>
+                            <td>
+                                <a href="./Forgot_Password.html" style="font-size:11px;">Forgot your Password?</a>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="Middle"> <!--Contains the Side Menu & Content-->
+        <div id="Side_Menu"> <!--Contains site navigation-->
+        <h2>   
+            <ul>   
+                <li onclick="javascript:location.href='Homepage.html'">Home</li>
+                <li onclick="javascript:location.href='Movie_List.html'">Movie List</li>
+                <li onclick="javascript:location.href='About.html'">About</li>
+            </ul>
+        </h2>
+        </div>
+    
+        <div id="Content_Box"> <!--Contains main content for all pages-->
+            <form onsubmit="ValidateAll_Null">
+            <table width="100%" class="fixed, Small" border="1">
+                <col width="20%" />
+                <col width="80%" />
+                <tr>
+                    <td style="width:650px" colspan="2">
+                        <p class="Underlined">Register for an account by filling out the fields below.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Username:
+                    </td>
+                    <td>
+                        <input type="text" id="Username" class="Long_input" name="Username" placeholder="Enter your Username" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Password:
+                    </td>
+                    <td>
+                        <input type="text" id="Password" class="Long_input" name="Password" placeholder="Enter your Password" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Confirm Password:
+                    </td>
+                    <td>
+                        <input type="password" id="C_Password" class="Long_input" name="C_Password" placeholder="Re-enter your Password" onkeyup="Validate_PasswordMatch()"/>
+                            <div id="Wizard_Password_Match">
+                            </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Gender:
+                    </td>
+                    <td class="Small_Bold">
+                        Male: <input type="radio" name="Gender" value="Male" />
+                        Female: <input type="radio" name="Gender" value="Female" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        E-mail:
+                    </td>
+                    <td>
+                        <input type="text" id="Email" class="Long_input" placeholder="Enter a valid E-mail address" onblur="Validate_Email()" />
+                            <div id="Wizard_Email">
+                            </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                        <input type="submit" value="Register" onclick="Confirm_Registration();" /> <input type="reset" value="Reset" />
+                    </td>
+                </tr>   
+            </table>
+            </form>
+        </div>
+    </div>
+
+    <div id="Footer"> <!--Contains the footer-->
+        <h3>The Footer is currently an empty void. Please ignore this.</h3>
+    </div>
+</div>
+
+</body>
+</html>
+
